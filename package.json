@@ -8,11 +8,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-lib": "cp projects/email-editor/package.json projects/email-editor/src/lib/source.json && ng build email-editor",
-    "npm-pack": "cd dist/email-editor && npm pack",
-    "copy-readme": "cp README.md dist/email-editor",
+    "build-lib": "xcopy projects\\email-editor\\package.json projects\\email-editor\\src\\lib\\source.json /Y && ng build email-editor --configuration production",
+    "npm-pack": "cd dist\\email-editor && npm pack",
+    "copy-readme": "xcopy README.md dist\\email-editor /Y",
     "package": "npm run build-lib && npm run copy-readme && npm run npm-pack",
-    "release": "npm run package && cd dist/email-editor && npm publish"
+    "release": "npm run package && cd dist\\email-editor && npm publish"
   },
   "private": true,
   "dependencies": {
